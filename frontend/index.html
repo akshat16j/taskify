@@ -1,0 +1,402 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>taskify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="signup-page"  style="display: block;">
+        <div class="topwave"><img style="width: 100%;" src="wavetop.svg" ></div>
+        <div id="signup-container" style="display: flex;justify-content: space-between; align-items: flex-start; width: 100%;">
+            <div class="img-div" style=" width: 50%; margin-left: 100px; min-height: 600px;" ><img src="paralympic badminton-cuate.svg" class="badminton" alt=""></div>
+            <div id="signup-form">
+                <form id="signup" >
+                    <div style="color: #56534B;
+                    font-family: Inter;
+                    font-size: 72px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal; text-align: center;padding-bottom: 40px;">taskify.</div>
+                    <div id="user-exists" style="color: #FA6363;
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 19px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal; padding-bottom: 8px; display: none;">user already exists!!</div>
+                    <div style="color: #56534B;
+                    font-family: Inter;
+                    font-size: 28px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal; text-align: center; padding-bottom: 35px;">create account</div>
+                    <label for="username-inp1" style="color: #56534B;
+                    font-family: Inter;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;">username:</label><br>
+                    <input type="text" id="username-inp1" style=" padding-left: 20px;color: #56534B;width: 345px;
+                    height: 34px;
+                    flex-shrink: 0;border-radius: 10px;
+                    background: #FFF;
+                    box-shadow: 6px 5px 4px 0px rgba(86, 83, 75, 0.50);outline: none; border: none; margin-bottom: 40px;width: 100%;"><br>
+                    <label for="password-inp1" style="color: #56534B;
+                    font-family: Inter;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal; padding-bottom: 10px;">password:</label><br>
+                    <input type="password" id="password-inp1" style="padding-left: 20px;color: #56534B; width: 345px;
+                    height: 34px;
+                    flex-shrink: 0;border-radius: 10px;
+                    background: #FFF;
+                    box-shadow: 6px 5px 4px 0px rgba(86, 83, 75, 0.50);outline: none; border: none; margin-bottom: 54px;width: 100%;"><br>
+                    <button style="border-radius: 10px;
+                    background: #56534B;
+                    box-shadow: 6px 5px 4px 0px rgba(86, 83, 75, 0.50);width: 345px;
+                    height: 49px;
+                    flex-shrink: 0;color: #FFF;
+                    font-family: Inter;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal; border: none;width: 100%; margin-bottom: 10px;" type="submit" value="sign up">sign up</button>
+                    <div style="color: #56534B;
+                    font-family: Inter;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;text-align: center;">already have an account?<a id="signin-rdr" style="color: #56534B;
+                    font-family: Inter;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 800;
+                    line-height: normal; padding-left: 3px; text-align: center;" href="/">sign in</a></div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="signin-page" style="display: none;">
+        <div class="topwave"><img style="width: 100%;" src="wavetop.svg" ></div>
+        <div id="signin-container" style="display: flex;justify-content: space-between; align-items: flex-start; width: 100%;">
+            <div class="img-div" style=" width: 50%; margin-left: 100px; min-height: 600px;" ><img src="paralympic badminton-cuate.svg" class="badminton" alt=""></div>
+            <div id="signin-form">
+                <form id="signin" >
+                    <div style="color: #56534B;
+                    font-family: Inter;
+                    font-size: 72px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal; text-align: center;padding-bottom: 40px;">taskify.</div>
+                    <div id="signin-msg" style="color: #77FD29;
+                    font-family: Inter;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal; text-align: center; padding-bottom: 15px; display: none;">account created succesfully!!</div>
+                    <div style="color: #56534B;
+                    font-family: Inter;
+                    font-size: 28px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal; text-align: center; padding-bottom: 35px;">log in</div>
+                    <label for="username-inp2" style="color: #56534B;
+                    font-family: Inter;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;">username:</label><br>
+                    <input type="text" id="username-inp2" style=" padding-left: 20px;color: #56534B;width: 345px;
+                    height: 34px;
+                    flex-shrink: 0;border-radius: 10px;
+                    background: #FFF;
+                    box-shadow: 6px 5px 4px 0px rgba(86, 83, 75, 0.50);outline: none; border: none; margin-bottom: 40px;width: 100%;"><br>
+                    <label for="password-inp2" style="color: #56534B;
+                    font-family: Inter;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal; padding-bottom: 10px;">password:</label><br>
+                    <input type="password" id="password-inp2" style="padding-left: 20px;color: #56534B; width: 345px;
+                    height: 34px;
+                    flex-shrink: 0;border-radius: 10px;
+                    background: #FFF;
+                    box-shadow: 6px 5px 4px 0px rgba(86, 83, 75, 0.50);outline: none; border: none; margin-bottom: 54px;width: 100%;"><br>
+                    <button style="border-radius: 10px;
+                    background: #56534B;
+                    box-shadow: 6px 5px 4px 0px rgba(86, 83, 75, 0.50);width: 345px;
+                    height: 49px;
+                    flex-shrink: 0;color: #FFF;
+                    font-family: Inter;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal; border: none;width: 100%; margin-bottom: 10px; cursor: pointer;" type="submit" value="sign in">sign in</button>
+                    <div style="color: #56534B;
+                    font-family: Inter;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;text-align: center;">not having an account?<a id="signup-rdr" style="color: #56534B;
+                    font-family: Inter;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 800;
+                    line-height: normal; padding-left: 3px; text-align: center;" href="/">sign up</a></div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div id="main-page" style="display: none; width: 100%;">
+        <div style="display: flex; width: 100%;" >
+            <dialog id="dialog">
+                <div id="close-dialog" style="color: #56534B;
+                font-family: Inter;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal; text-align: right; cursor: pointer;">x</div>
+                <div style="color: #56534B;
+                font-family: Inter;
+                font-size: 31px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;text-align: center;">add new task</div>
+                <form id="form" method="dialog">
+                    <label for="task" style="color: #56534B;
+                    font-family: Inter;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;padding-left: 5px">task:</label><br>
+                    <input required type="text" id="task" style="border-radius: 10px;
+                    border: 0px solid #56534B;
+                    background: #FFFEF0;
+                    box-shadow: 6px 5px 4px 0px rgba(86, 83, 75, 0.50);width: 500px;
+                    height: 44px;
+                    flex-shrink: 0; outline: none; margin-top: 5px;padding: 10px;overflow: hidden;color: #56534B;" >
+                    <div style="color: #56534B;
+                    font-family: Inter;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;padding-left: 5px; margin-top: 40px;">decsription:</div>
+                <textarea 
+                id="description" 
+                name="description" 
+                style="
+                    width: 500px;
+                    height: 121px;
+                    flex-shrink: 0;
+                    border-radius: 10px;
+                    border: 0px solid #56534B;
+                    background: #FFFEF0;
+                    box-shadow: 6px 5px 4px 0px rgba(86, 83, 75, 0.50);
+                    outline: none;
+                    margin-top: 5px;
+                    text-align: left;
+                    padding: 10px;
+                    overflow: auto; 
+                    line-height: 1.5;
+                    font-size: 16px; 
+                    resize: none; 
+                    color: #56534B;
+                    font-family: Inter;
+                "
+                ></textarea>
+                    <div style="color: #56534B;
+                    font-family: Inter;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;padding-left: 5px; margin-top: 40px;">priority:</div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div id="pr-high" class="priority" style="background-color: #FA6363; ">
+                            <div style="color: #FFF;
+                            font-family: Inter;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal; text-align: center;padding-top: 9px;">high</div>
+                        </div>
+                        <div id="pr-med" class="priority" style="background-color: #F6AA2E;">
+                            <div style="color: #FFF;
+                            font-family: Inter;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal; text-align: center;padding-top: 9px;">medium</div>
+                        </div>
+                        <div id="pr-low" class="priority" style="background-color: #77FD29;">
+                            <div style="color: #FFF;
+                            font-family: Inter;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal; text-align: center;padding-top: 9px;">low</div>
+                        </div>
+                    </div>
+                    <div style="color: #56534B;
+                    font-family: Inter;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;padding-left: 5px; margin-top: 40px;">label:</div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <div id="work" class="label-assign" style="background-color: #D2CEFF; ">
+                            <div style="color: #56534B;
+                            font-family: Inter;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal; text-align: center;padding-top: 9px;">work</div>
+                        </div>
+                        <div id="study" class="label-assign" style="background-color: #D1E5F7;">
+                            <div style="color: #56534B;
+                            font-family: Inter;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal; text-align: center;padding-top: 9px;">study</div>
+                        </div>
+                        <div id="entertainment" class="label-assign" style="background-color: #FFCECE;">
+                            <div style="color: #56534B;
+                            font-family: Inter;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal; text-align: center;padding-top: 9px;">entertainment</div>
+                        </div>
+                        <div id="family" class="label-assign" style="background-color: #DAF2D6;">
+                            <div style="color: #56534B;
+                            font-family: Inter;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal; text-align: center;padding-top: 9px;">family</div>
+                        </div>
+                    </div>
+                    <div id="addtask">
+                        <div style="color: #FFF;
+                        font-family: Inter;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal; padding-top: 12px;">add task</div>
+                    </div>
+                    
+
+                </form>
+                
+            </dialog>
+            <div id="sidebar">
+                <div id="taskify">taskify.</div>
+                <div id="newtask">
+                    <div style="color: #FFF;
+                    font-family: Inter;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal; padding-top: 9px;text-align: center;">add new task</div>
+                </div>
+                <div id="labels" style=" width: 80%; margin: 0 auto;" > 
+                    <div style="padding-bottom: 50px; display: flex; align-items: center;">
+                        <span class="circle" style="background-color: #D2CEFF; "></span>
+                        <span class="label" style="margin-right: 5px;">work</span>
+                    </div>
+                    <div style="padding-bottom: 50px ; display: flex; align-items: center">
+                        <span class="circle" style="background-color: #D1E5F7"></span>
+                        <span class="label" style="margin-right: 5px;">study</span>
+                    </div>
+                    <div style="padding-bottom: 50px; display: flex; align-items: center">
+                        <span class="circle" style="background-color: #FFCECE"></span>
+                        <span class="label" style="margin-right: 5px;">entertainment</span>
+                    </div>
+                    <div style="padding-bottom: 50px ; display: flex; align-items: center" >
+                        <span class="circle" style="background-color: #DAF2D6"></span>
+                        <span class="label" style="margin-right: 5px;">family</span>
+                    </div>
+                </div>
+                <img id="doodle" src="Open Doodles - Dancing.png" alt="doodle">
+                <div id="user2" style="font-size: 2vw">log out</div>
+            </div>
+            <div id="div2">
+                <div id="header" style="width: 100%">
+                    <div id="user" style="font-size: 1.4vw;">log out</div>
+                    <div id="profileicon">
+                        <img id="usericon" src="profile.png" alt="">
+                    </div>
+                </div>
+                <div id="contents">
+                    <div id="todos" >
+                        <div style="color: #56534B;
+                        font-family: Inter;
+                        font-size: 22px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal; padding-left: 10px; ">to-dos</div>
+                        <div id="main1" class="droppable" ondrop="drop(event)" ondragover="ondragover(event)" ></div>
+                    </div>
+                    <div id="in-progress" >
+                        <div style="color: #56534B;
+                        font-family: Inter;
+                        font-size: 22px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal; padding-left: 10px;">in-progress</div>
+                        <div id="main2" class="droppable" ondrop="drop(event)" ondragover="ondragover(event)"></div>
+                    </div>
+                    <div id="under-review" >
+                        <div style="color: #56534B;
+                        font-family: Inter;
+                        font-size: 22px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal; padding-left: 10px;">under-review</div>
+                        <div id="main3" class="droppable" ondrop="drop(event)" ondragover="ondragover(event)" ></div>
+                        
+
+                    </div>
+                    <div id="finished" >
+                        <div style="color: #56534B;
+                        font-family: Inter;
+                        font-size: 22px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal; padding-left: 10px;">finished</div>
+                        <div id="main4" class="droppable" ondrop="drop(event)" ondragover="ondragover(event)">
+                            
+                        </div>
+                        
+
+                    </div>
+                </div>
+                <div id="footer">
+                    <div style="color: #1E1E1E;
+                    font-family: Inter;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;">made with love: by akshat</div>
+                    <a href="https://github.com/akshat16j"><img class="links" src="github.png" alt=""></a>
+                    <a href="https://x.com/akshat16j"><img class="links" src="twitter.png" alt=""></a>
+                    <a href="https://www.instagram.com/akshattjangid/"><img class="links" src="instagram.png" alt=""></a>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script type="module" src="script.js"> 
+
+</script>
+</html>
