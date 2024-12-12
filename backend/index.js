@@ -21,7 +21,7 @@ const port = process.env.PORT;
 app.use(express.json());
 
 app.use(cors({
-    origin:"http://127.0.0.1:5500"
+    origin:"https://taskify-nu-five.vercel.app/"
 }))
 
 

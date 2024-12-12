@@ -1,3 +1,4 @@
+const backendUrl = "https://taskify-2.vercel.app/"
 window.ondragover = function (event) {
     event.preventDefault();
     event.stopPropagation();
@@ -20,7 +21,7 @@ window.drop = async function (event) {
             console.error("Drop error:", error.message);
         }
         const droppedInto = event.target.id;
-        const response  = await fetch("http://localhost:4000/update", {
+        const response  = await fetch(backendUrl + "update", {
             method: "POST",
             headers: { "Content-Type": "application/json","authorization":localStorage.getItem("token") },
             body: JSON.stringify({
@@ -49,7 +50,7 @@ document.getElementById("signup").addEventListener("submit",async (e)=>{
     }else{
         const username = document.querySelector("#username-inp1").value
         const password = document.querySelector("#password-inp1").value
-        const response = await fetch("http://localhost:4000/signup" ,{
+        const response = await fetch(backendUrl+ "signup" ,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
@@ -87,7 +88,7 @@ document.getElementById("signin").addEventListener("submit",async (e)=>{
     }else{
         const username = document.querySelector("#username-inp2").value
         const password = document.querySelector("#password-inp2").value
-        const response = await fetch("http://localhost:4000/signin" ,{
+        const response = await fetch(backendUrl+ "signin" ,{
             method:"POST",
             headers:{
                 "Content-Type":"application/json"
@@ -493,7 +494,7 @@ document.querySelector("#addtask").addEventListener("click", async (e)=>{
     }else{
         try{
             console.log(task + description + labelValue + priorityValue)
-            const response = await fetch("http://localhost:4000/create-todo", {
+            const response = await fetch(backendUrl+ "create-todo", {
                 method: "POST",
                 headers: {
                     "Content-Type":"application/json",
@@ -533,7 +534,7 @@ window.onload = async ()=>{
         document.getElementById("signin-page").style.display = "none"
         document.getElementById("main-page").style.display = "block"
     }
-    const response = await fetch("http://localhost:4000/", {
+    const response = await fetch(backendUrl, {
         method: "GET",
         headers:{
             "authorization":localStorage.getItem("token")
@@ -548,7 +549,7 @@ window.onload = async ()=>{
 }
 
 async function deleteTask(index){
-    const response  = await fetch("http://localhost:4000/delete-todo", {
+    const response  = await fetch(backendUrl+ "delete-todo", {
         method: "POST",
         headers: {
             "Content-Type":"application/json",
