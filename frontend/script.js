@@ -1,4 +1,4 @@
-const backendUrl = "https://taskify-2.vercel.app/"
+const backendUrl = "https://taskify-backend-rho.vercel.app/"
 window.ondragover = function (event) {
     event.preventDefault();
     event.stopPropagation();
